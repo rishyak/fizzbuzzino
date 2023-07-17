@@ -14,7 +14,7 @@ FizzBuzz::FizzBuzz(uint32_t limit, uint32_t current) :
 /**
  * @brief Get limit
  *
- * @return uint32_t
+ * @return limit
  */
 uint32_t FizzBuzz::get_limit() {
   return limit;
@@ -23,7 +23,7 @@ uint32_t FizzBuzz::get_limit() {
 /**
  * @brief Get current
  *
- * @return uint32_t
+ * @return current
  */
 uint32_t FizzBuzz::get_current() {
   return current;
@@ -70,8 +70,7 @@ String FizzBuzz::do_fizzy() {
 /**
  * @brief Check if the state has changed
  *
- * @return true
- * @return false
+ * @return  true of state has changed
  */
 bool FizzBuzz::state_changed() {
   if (limit != prev_limit) {
