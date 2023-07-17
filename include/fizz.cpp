@@ -42,7 +42,7 @@ void FizzBuzz::inc_limit() {
 void FizzBuzz::dec_limit() {
   limit--;
   if (limit < current) {
-    current = limit;
+    current = limit - 1;
   }
 }
 
