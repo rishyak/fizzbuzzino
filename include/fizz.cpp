@@ -3,7 +3,7 @@
 namespace fzb {
 
 /**
- * @brief Construct a new Fizz Buzz:: Fizz Buzz object
+ * @brief Construct a new Fizz Buzz object
  *
  * @param limit     limit of fizzbuzz operation
  * @param current   current fizzbuzz count
@@ -50,7 +50,7 @@ void FizzBuzz::dec_limit() {
  * @brief increment current
  */
 void FizzBuzz::inc_current() {
-  current = ++current % limit;
+  current = ++current % (limit + 1);
 }
 
 /**

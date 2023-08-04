@@ -6,14 +6,14 @@ namespace screen {
 
 Adafruit_ST7789 screen = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 
-void init_screen();
+void initialise();
 
-void clear_screen();
+void clear();
 
 /**
  * @brief initialise screen
  */
-void init_screen() {
+void initialise() {
   pinMode(TFT_BACKLITE, OUTPUT);
   digitalWrite(TFT_BACKLITE, HIGH);
   pinMode(TFT_I2C_POWER, OUTPUT);
@@ -22,14 +22,14 @@ void init_screen() {
 
   screen.init(135, 240);
   screen.setRotation(3);
-  screen::clear_screen();
+  screen::clear();
   screen.setTextSize(3);
 }
 
 /**
  * @brief clear screen
  */
-void clear_screen() {
+void clear() {
   screen.fillScreen(ST77XX_BLACK);
   screen.setCursor(0, 10);
 }

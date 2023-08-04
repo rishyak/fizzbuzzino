@@ -8,7 +8,7 @@ void setup() {
   pinMode(BUTTON_CURRENT, INPUT);
   pinMode(BUTTON_DEC_LIMIT, INPUT);
 
-  screen::init_screen();
+  screen::initialise();
 
   // First display
   screen::display(fizzbuzz.get_limit(), fizzbuzz.get_current(), fizzbuzz.do_fizzy());
@@ -25,7 +25,7 @@ void loop() {
 
   // Only reset screen if state changed
   if (fizzbuzz.state_changed()) {
-    screen::clear_screen();
+    screen::clear();
     screen::display(fizzbuzz.get_limit(), fizzbuzz.get_current(), fizzbuzz.do_fizzy());
   }
 }
