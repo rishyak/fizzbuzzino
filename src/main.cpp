@@ -5,9 +5,9 @@
 fzb::FizzBuzz fizzbuzz = fzb::FizzBuzz(LIMIT, 0);
 
 void setup() {
-  pinMode(BUTTON_CURRENT, INPUT_PULLUP);
-  pinMode(BUTTON_INC_LIMIT, INPUT_PULLUP);
-  pinMode(BUTTON_DEC_LIMIT, INPUT_PULLUP);
+  pinMode(BUTTON_CURRENT, INPUT);
+  pinMode(BUTTON_INC_LIMIT, INPUT);
+  pinMode(BUTTON_DEC_LIMIT, INPUT);
 
   screen::initialise();
   // First display
@@ -18,8 +18,8 @@ void setup() {
 void loop() {
   // Check button input
   if (!digitalRead(BUTTON_INC_LIMIT)) fizzbuzz.inc_limit();
-  if (digitalRead(BUTTON_CURRENT)) fizzbuzz.inc_current();
-  if (digitalRead(BUTTON_DEC_LIMIT)) fizzbuzz.dec_limit();
+  if (!digitalRead(BUTTON_CURRENT)) fizzbuzz.inc_current();
+  if (!digitalRead(BUTTON_DEC_LIMIT)) fizzbuzz.dec_limit();
 
   // Wait
   delay(300);
