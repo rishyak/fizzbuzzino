@@ -1,4 +1,4 @@
-#include "fizz.hpp"
+#include <fizz.hpp>
 
 namespace fzb {
 
@@ -8,33 +8,30 @@ namespace fzb {
  * @param limit     limit of fizzbuzz operation
  * @param current   current fizzbuzz count
  */
-FizzBuzz::FizzBuzz(uint32_t limit, uint32_t current) :
-    limit(limit), current(current), prev_limit(limit), prev_current(current) {}
+FizzBuzz::FizzBuzz(std::uint32_t limit, std::uint32_t current)
+    : limit(limit),
+      current(current),
+      prev_limit(limit),
+      prev_current(current) {}
 
 /**
  * @brief Get limit
  *
  * @return limit
  */
-uint32_t FizzBuzz::get_limit() {
-  return limit;
-}
+std::uint32_t FizzBuzz::get_limit() { return limit; }
 
 /**
  * @brief Get current
  *
  * @return current
  */
-uint32_t FizzBuzz::get_current() {
-  return current;
-}
+std::uint32_t FizzBuzz::get_current() { return current; }
 
 /**
  * @brief increment limit
  */
-void FizzBuzz::inc_limit() {
-  limit++;
-}
+void FizzBuzz::inc_limit() { limit++; }
 
 /**
  * @brief decrement limit
@@ -49,9 +46,7 @@ void FizzBuzz::dec_limit() {
 /**
  * @brief increment current
  */
-void FizzBuzz::inc_current() {
-  current = ++current % (limit + 1);
-}
+void FizzBuzz::inc_current() { current = ++current % (limit + 1); }
 
 /**
  * @brief perform fizzbuzz
@@ -85,4 +80,4 @@ bool FizzBuzz::state_changed() {
   return false;
 }
 
-} // namespace fzb
+}  // namespace fzb

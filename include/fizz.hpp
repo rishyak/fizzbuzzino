@@ -2,20 +2,21 @@
 #define FIZZ_H
 
 #include <Arduino.h>
+
 #include <cstdint>
 
-#define BUTTON_INC_LIMIT 0
-#define BUTTON_CURRENT   1
-#define BUTTON_DEC_LIMIT 2
+#define BUTTON_INC_LIMIT 10
+#define BUTTON_CURRENT 11
+#define BUTTON_DEC_LIMIT 12
 
 namespace fzb {
 class FizzBuzz {
-public:
-  FizzBuzz(uint32_t, uint32_t);
+ public:
+  FizzBuzz(std::uint32_t, std::uint32_t);
 
-  uint32_t get_limit();
+  std::uint32_t get_limit();
 
-  uint32_t get_current();
+  std::uint32_t get_current();
 
   void inc_limit();
 
@@ -27,14 +28,14 @@ public:
 
   bool state_changed();
 
-private:
-  uint32_t limit;
-  uint32_t current;
+ private:
+  std::uint32_t limit;
+  std::uint32_t current;
 
-  uint32_t prev_limit;
-  uint32_t prev_current;
+  std::uint32_t prev_limit;
+  std::uint32_t prev_current;
 };
 
-} // namespace fzb
+}  // namespace fzb
 
-#endif // FIZZ_H
+#endif  // FIZZ_H

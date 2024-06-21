@@ -53,4 +53,4 @@ void display(uint32_t limit, uint32_t current, String fizzy) {
   screen::screen.print(fizzy);
 }
 
-} // namespace screen
+}  // namespace screen
