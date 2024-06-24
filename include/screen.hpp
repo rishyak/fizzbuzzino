@@ -43,7 +43,7 @@ void clear() {
  */
 void display(uint32_t limit, uint32_t current, String fizzy) {
   screen::screen.setTextColor(ST77XX_WHITE);
-  screen::screen.printf("Limit    %d\n", limit);
+  screen::screen.printf("Limit    %u\n", limit);
   screen::screen.printf("Current  %d\n", current);
 
   screen::screen.setTextColor(ST77XX_CYAN);
