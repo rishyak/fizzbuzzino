@@ -17,9 +17,9 @@ void setup() {
 
 void loop() {
   // Check button input
-  if (!digitalRead(BUTTON_INC_LIMIT)) fizzbuzz.inc_limit();
-  if (!digitalRead(BUTTON_CURRENT)) fizzbuzz.inc_current();
-  if (!digitalRead(BUTTON_DEC_LIMIT)) fizzbuzz.dec_limit();
+  if (digitalRead(BUTTON_INC_LIMIT)) fizzbuzz.inc_limit();
+  if (digitalRead(BUTTON_CURRENT)) fizzbuzz.inc_current();
+  if (digitalRead(BUTTON_DEC_LIMIT)) fizzbuzz.dec_limit();
 
   // Wait
   delay(300);

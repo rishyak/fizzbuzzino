@@ -41,10 +41,10 @@ void clear() {
  * @param current   the current number
  * @param fizzy     fizzbuzz string
  */
-void display(uint32_t limit, uint32_t current, String fizzy) {
+void display(uint16_t limit, uint16_t current, String fizzy) {
   screen::screen.setTextColor(ST77XX_WHITE);
-  screen::screen.printf("Limit    %u\n", limit);
-  screen::screen.printf("Current  %d\n", current);
+  screen::screen.printf("Limit   %u\n", limit);
+  screen::screen.printf("Current %u\n", current);
 
   screen::screen.setTextColor(ST77XX_CYAN);
   screen::screen.printf("-------------");

@@ -12,11 +12,11 @@
 namespace fzb {
 class FizzBuzz {
  public:
-  FizzBuzz(std::uint32_t, std::uint32_t);
+  FizzBuzz(std::uint16_t, std::uint16_t);
 
-  std::uint32_t get_limit();
+  std::uint16_t get_limit();
 
-  std::uint32_t get_current();
+  std::uint16_t get_current();
 
   void inc_limit();
 
@@ -29,11 +29,11 @@ class FizzBuzz {
   bool state_changed();
 
  private:
-  std::uint32_t limit;
-  std::uint32_t current;
+  std::uint16_t limit;
+  std::uint16_t current;
 
-  std::uint32_t prev_limit;
-  std::uint32_t prev_current;
+  std::uint16_t prev_limit;
+  std::uint16_t prev_current;
 };
 
 }  // namespace fzb

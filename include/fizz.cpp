@@ -8,7 +8,7 @@ namespace fzb {
  * @param limit     limit of fizzbuzz operation
  * @param current   current fizzbuzz count
  */
-FizzBuzz::FizzBuzz(std::uint32_t limit, std::uint32_t current)
+FizzBuzz::FizzBuzz(std::uint16_t limit, std::uint16_t current)
     : limit(limit),
       current(current),
       prev_limit(limit),
@@ -19,14 +19,14 @@ FizzBuzz::FizzBuzz(std::uint32_t limit, std::uint32_t current)
  *
  * @return limit
  */
-std::uint32_t FizzBuzz::get_limit() { return limit; }
+std::uint16_t FizzBuzz::get_limit() { return limit; }
 
 /**
  * @brief Get current
  *
  * @return current
  */
-std::uint32_t FizzBuzz::get_current() { return current; }
+std::uint16_t FizzBuzz::get_current() { return current; }
 
 /**
  * @brief increment limit
