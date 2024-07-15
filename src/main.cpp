@@ -1,8 +1,8 @@
-#include <fizz.cpp>
+#include <fizz.hpp>
 #include <screen.hpp>
 
 #define LIMIT 10
-fzb::FizzBuzz fizzbuzz = fzb::FizzBuzz(LIMIT, 0);
+fzb::FizzBuzz fizzbuzz{LIMIT, 0};
 
 void setup() {
   pinMode(BUTTON_CURRENT, INPUT);

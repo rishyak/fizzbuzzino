@@ -4,7 +4,7 @@
 
 namespace screen {
 
-Adafruit_ST7789 screen = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
+Adafruit_ST7789 screen{TFT_CS, TFT_DC, TFT_RST};
 
 void initialise();
 
